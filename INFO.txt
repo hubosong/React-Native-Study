@@ -1,0 +1,27 @@
+1. Configurar biblioteca
+---------------------------------
+npm install --save react-navigation
+npm install --save react-navigation-stack
+npm install --save react-native-gesture-handler
+react-native link react-native-gesture-handler
+
+Observação: A partir da versão 0.60 do React Native, não é preciso fazer link, o link é automático.
+
+2. Editar arquivo MainActivity.java
+----------------------------------------
+import com.facebook.react.ReactActivityDelegate;
+import com.facebook.react.ReactRootView;
+import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
+
+@Override
+  protected ReactActivityDelegate createReactActivityDelegate() {
+    return new ReactActivityDelegate(this, getMainComponentName()) {
+      @Override
+      protected ReactRootView createRootView() {
+       return new RNGestureHandlerEnabledRootView(MainActivity.this);
+      }
+    };
+  }
+
+
+Observação: A partir da versão 5.0 do React Navigation, não é mais preciso editar o arquivo MainActivity.
