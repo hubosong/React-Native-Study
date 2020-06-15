@@ -19,7 +19,12 @@ export default function Routes() {
     return (
         <NavigationContainer>
 
-            <Stack.Navigator screenOptions={{ headerStyle: { backgroundColor: '#555' }, headerTintColor: '#fff' }}>
+            <Stack.Navigator
+                //headerMode="none"
+                screenOptions={{
+                    headerStyle: { backgroundColor: '#555' },
+                    headerTintColor: '#fff'
+                }}>
 
                 {/** colocar todas as telas */}
                 <Stack.Screen name='Home' component={Home} options={{ title: 'Dashboard' }} />

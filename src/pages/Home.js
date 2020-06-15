@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, Button } from 'react-native'
+import { View, Text, Button, TouchableOpacity, StyleSheet, TouchableHighlight } from 'react-native'
 
 export default function Home({ navigation }) {
 
@@ -10,11 +10,19 @@ export default function Home({ navigation }) {
     */
 
     return (
+
         <View style={{ flex: 1, alignItems: 'center' }}>
-            
+
             <Text style={{ fontSize: 50, margin: 50 }}>HOME</Text>
 
-            <Button title="VIEWS" onPress={() => navigation.navigate('Views')} />
+            <TouchableHighlight
+                onPress={() => navigation.navigate('Views')}
+                style={{ ...styles.btn }}
+                underlayColor='#555'>
+
+                <Text style={{ ...styles.btnText }}>VIEWS</Text>
+            </TouchableHighlight>
+
             <Button title="IMC" onPress={() => navigation.navigate('IMC')} />
             <Button title="ABOUT" onPress={() => navigation.navigate('About')} />
             <Button title="TABS" onPress={() => navigation.navigate('Tabs')} />
@@ -22,3 +30,20 @@ export default function Home({ navigation }) {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    btn: {
+        backgroundColor: "darkorange",
+        paddingVertical: 12,
+        paddingHorizontal: 25,
+        borderRadius: 25,
+        marginBottom: 10,
+    },
+    btnActive: {
+        backgroundColor: '#555'
+    },
+    btnText: {
+        color: "white",
+        fontSize: 18,
+    }
+})
