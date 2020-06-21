@@ -1,13 +1,30 @@
 import React from 'react'
-import { View, Text, Button } from 'react-native'
+import { View, Button, StyleSheet, ImageBackground } from 'react-native'
 
 export default function About({ navigation }) {
     return (
-        <View>
-            <Button
-                title="Voltar HOME SCREEN"
-                onPress={() => navigation.navigate('Home')} />
-            <Text>ABOUT</Text>
-        </View>
+        <ImageBackground source={require('../bg.jpg')} style={styles.imgBG}>
+            <View style={styles.inner}>
+                <Button
+                    title="<< Voltar HOME SCREEN"
+                    onPress={() => navigation.navigate('Home')} />
+            </View>
+        </ImageBackground>
+
     )
 }
+
+const styles = StyleSheet.create({
+    imgBG: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    inner: {
+        width: '80%',
+        height: '80%',
+        backgroundColor: 'rgba(0,0,0, .5)',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+})

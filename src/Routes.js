@@ -6,11 +6,14 @@ import { createStackNavigator } from '@react-navigation/stack' //modelo simples 
 
 
 //importar telas
-import Home from './pages/Home'
+import Home from './Home'
 import Views from './pages/Views'
 import IMC from './pages/IMC'
 import About from './pages/About'
 import Tabs from './pages/Tabs'
+import Grid from './pages/Grid'
+import ElementsComponents from './pages/ElementsComponents'
+import Login from './pages/Login'
 
 //navegador das telas Stack
 const Stack = createStackNavigator()
@@ -32,6 +35,9 @@ export default function Routes() {
                 <Stack.Screen name='IMC' component={IMC} />
                 <Stack.Screen name='About' component={About} />
                 <Stack.Screen name='Tabs' component={Tabs} />
+                <Stack.Screen name='Grid' component={Grid} />
+                <Stack.Screen name='ElementsComponents' component={ElementsComponents} />
+                <Stack.Screen name='Login' component={Login} />
 
             </Stack.Navigator>
 
