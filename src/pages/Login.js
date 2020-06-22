@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, TextInput, ImageBackground, StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native'
+import { View, Text, TextInput, ImageBackground, StyleSheet, Image, Dimensions, TouchableOpacity, ToastAndroid } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
 import bgImage from '../bg.jpg'
@@ -57,7 +57,7 @@ export default class Login extends Component {
                     </TouchableOpacity>
                 </View>
     
-                <TouchableOpacity style={styles.btnLogin}>
+                <TouchableOpacity style={styles.btnLogin} onPress={() => ToastAndroid.show('Button Clicado..', ToastAndroid.SHORT)}>
                     <Text style={styles.btnText}>LOGIN</Text>
                 </TouchableOpacity>
     

@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, TouchableHighlight, TouchableOpacity } from 'react-native'
+import { View, Text, StyleSheet, TouchableHighlight, TouchableOpacity, ScrollView } from 'react-native'
 
 export default function Home({ navigation }) {
 
@@ -11,39 +11,57 @@ export default function Home({ navigation }) {
 
     return (
 
-        <View style={{ flex: 1, alignItems: 'center', backgroundColor: '#ddd' }}>
+        <ScrollView style={{ backgroundColor: '#ddd' }}>
+            <View style={{ flex: 1, alignItems: 'center' }}>
 
-            <Text style={{ fontSize: 50, margin: 50 }}>HOME</Text>
+                <Text style={{ fontSize: 50, margin: 30 }}>HOME</Text>
 
-            <TouchableHighlight onPress={() => navigation.navigate('Views')} style={{ ...styles.btn }} underlayColor='#555'>
-                <Text style={{ ...styles.btnText }}>VIEWS</Text>
-            </TouchableHighlight>
+                <TouchableHighlight onPress={() => navigation.navigate('FullAPP')} style={{ ...styles.btn }} underlayColor='#555'>
+                    <Text style={{ ...styles.btnText }}>FullAPP</Text>
+                </TouchableHighlight>
 
-            <TouchableHighlight onPress={() => navigation.navigate('IMC')} style={{ ...styles.btn }} underlayColor='#555'>
-                <Text style={{ ...styles.btnText }}>IMC</Text>
-            </TouchableHighlight>
+                <TouchableHighlight onPress={() => navigation.navigate('PropsStates')} style={{ ...styles.btn }} underlayColor='#555'>
+                    <Text style={{ ...styles.btnText }}>PropsStates</Text>
+                </TouchableHighlight>
 
-            <TouchableHighlight onPress={() => navigation.navigate('Tabs')} style={{ ...styles.btn }} underlayColor='#555'>
-                <Text style={{ ...styles.btnText }}>TABS</Text>
-            </TouchableHighlight>
 
-            <TouchableHighlight onPress={() => navigation.navigate('About')} style={{ ...styles.btn }} underlayColor='#555'>
-                <Text style={{ ...styles.btnText }}>ABOUT</Text>
-            </TouchableHighlight>
 
-            <TouchableOpacity onPress={() => navigation.navigate('Grid')} style={{ ...styles.btn, marginTop: 10 }}>
-                <Text style={{ ...styles.btnText }}>GRID</Text>
-            </TouchableOpacity>
+                <Text style={{ marginBottom: 10 }}>------------------</Text>
 
-            <TouchableOpacity onPress={() => navigation.navigate('ElementsComponents')} style={{ ...styles.btn, marginTop: 10 }}>
-                <Text style={{ ...styles.btnText }}>ElementsComponents</Text>
-            </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => navigation.navigate('Login')} style={{ ...styles.btn, marginTop: 10 }}>
-                <Text style={{ ...styles.btnText }}>Login</Text>
-            </TouchableOpacity>
 
-        </View>
+                <TouchableHighlight onPress={() => navigation.navigate('Views')} style={{ ...styles.btn }} underlayColor='#555'>
+                    <Text style={{ ...styles.btnText }}>VIEWS</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={() => navigation.navigate('IMC')} style={{ ...styles.btn }} underlayColor='#555'>
+                    <Text style={{ ...styles.btnText }}>IMC</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={() => navigation.navigate('Tabs')} style={{ ...styles.btn }} underlayColor='#555'>
+                    <Text style={{ ...styles.btnText }}>TABS</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={() => navigation.navigate('About')} style={{ ...styles.btn }} underlayColor='#555'>
+                    <Text style={{ ...styles.btnText }}>ABOUT</Text>
+                </TouchableHighlight>
+
+                <TouchableOpacity onPress={() => navigation.navigate('Grid')} style={{ ...styles.btn, marginTop: 10 }}>
+                    <Text style={{ ...styles.btnText }}>GRID</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={() => navigation.navigate('ElementsComponents')} style={{ ...styles.btn, marginTop: 10 }}>
+                    <Text style={{ ...styles.btnText }}>ElementsComponents</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={() => navigation.navigate('Login')} style={{ ...styles.btn, marginTop: 10 }}>
+                    <Text style={{ ...styles.btnText }}>Login</Text>
+                </TouchableOpacity>
+
+            </View>
+        </ScrollView>
+
+
     )
 }
 

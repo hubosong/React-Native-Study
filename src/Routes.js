@@ -14,6 +14,8 @@ import Tabs from './pages/Tabs'
 import Grid from './pages/Grid'
 import ElementsComponents from './pages/ElementsComponents'
 import Login from './pages/Login'
+import PropsStates from './pages/PropsStates'
+import FullAPP from './pages/FullAPP'
 
 //navegador das telas Stack
 const Stack = createStackNavigator()
@@ -38,6 +40,8 @@ export default function Routes() {
                 <Stack.Screen name='Grid' component={Grid} />
                 <Stack.Screen name='ElementsComponents' component={ElementsComponents} />
                 <Stack.Screen name='Login' component={Login} />
+                <Stack.Screen name='PropsStates' component={PropsStates} />
+                <Stack.Screen name='FullAPP' component={FullAPP} />
 
             </Stack.Navigator>
 
