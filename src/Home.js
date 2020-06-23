@@ -14,7 +14,11 @@ export default function Home({ navigation }) {
         <ScrollView style={{ backgroundColor: '#ddd' }}>
             <View style={{ flex: 1, alignItems: 'center' }}>
 
-                <Text style={{ fontSize: 50, margin: 30 }}>HOME</Text>
+                <Text style={{ fontSize: 30, margin: 20 }}>React Native Studies</Text>
+
+                <TouchableHighlight onPress={() => navigation.navigate('Animations')} style={{ ...styles.btn }} underlayColor='#555'>
+                    <Text style={{ ...styles.btnText }}>Animations</Text>
+                </TouchableHighlight>
 
                 <TouchableHighlight onPress={() => navigation.navigate('FullAPP')} style={{ ...styles.btn }} underlayColor='#555'>
                     <Text style={{ ...styles.btnText }}>FullAPP</Text>
@@ -67,7 +71,7 @@ export default function Home({ navigation }) {
 
 const styles = StyleSheet.create({
     btn: {
-        backgroundColor: "darkorange",
+        backgroundColor: "#a0f",
         paddingVertical: 12,
         paddingHorizontal: 25,
         borderRadius: 25,

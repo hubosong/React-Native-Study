@@ -16,6 +16,7 @@ import ElementsComponents from './pages/ElementsComponents'
 import Login from './pages/Login'
 import PropsStates from './pages/PropsStates'
 import FullAPP from './pages/FullAPP'
+import Animations from './pages/Animations'
 
 //navegador das telas Stack
 const Stack = createStackNavigator()
@@ -42,6 +43,7 @@ export default function Routes() {
                 <Stack.Screen name='Login' component={Login} />
                 <Stack.Screen name='PropsStates' component={PropsStates} />
                 <Stack.Screen name='FullAPP' component={FullAPP} />
+                <Stack.Screen name='Animations' component={Animations} />
 
             </Stack.Navigator>
 
