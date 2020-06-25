@@ -18,6 +18,7 @@ import PropsStates from './pages/PropsStates'
 import FullAPP from './pages/FullAPP'
 import Animations from './pages/Animations'
 import MainScreen from './pages/screensstacknav/MainScreen'
+import Netflix from './pages/clonenetflix/Netflix'
 
 
 //navegador das telas Stack
@@ -28,10 +29,10 @@ export default function Routes() {
         <NavigationContainer>
 
             <Stack.Navigator
-                //headerMode="none"
+                headerMode="none"
                 screenOptions={{
-                    headerStyle: { backgroundColor: '#555' },
-                    headerTintColor: '#fff',
+                    //headerStyle: { backgroundColor: '#555' },
+                    //headerTintColor: '#fff',
                     gestureEnabled: true,
                     gestureDirection: 'horizontal',
                 }}>
@@ -49,6 +50,7 @@ export default function Routes() {
                 <Stack.Screen name='FullAPP' component={FullAPP} />
                 <Stack.Screen name='Animations' component={Animations} />
                 <Stack.Screen name='MainScreen' component={MainScreen} />
+                <Stack.Screen name='Netflix' component={Netflix} />
 
             </Stack.Navigator>
 

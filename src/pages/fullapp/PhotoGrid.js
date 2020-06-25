@@ -7,18 +7,18 @@ export default function PhotoGrid() {
                 <View style={styles.photogrid}>
                     
                     <View style={styles.photoWrap}>
-                        <Image style={styles.photo} source={require('../../bg.jpg')} />
+                        <Image style={styles.photo} source={require('../../assets/bg.jpg')} />
                     </View>
-                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../bg.jpg')}/></View>
-                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../bg.jpg')}/></View>
-                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../bg.jpg')}/></View>
-                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../bg.jpg')}/></View>
-                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../bg.jpg')}/></View>
-                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../bg.jpg')}/></View>
-                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../bg.jpg')}/></View>
-                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../bg.jpg')}/></View>
-                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../bg.jpg')}/></View>
-                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../bg.jpg')}/></View>   
+                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../assets/bg.jpg')}/></View>
+                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../assets/bg.jpg')}/></View>
+                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../assets/bg.jpg')}/></View>
+                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../assets/bg.jpg')}/></View>
+                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../assets/bg.jpg')}/></View>
+                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../assets/bg.jpg')}/></View>
+                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../assets/bg.jpg')}/></View>
+                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../assets/bg.jpg')}/></View>
+                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../assets/bg.jpg')}/></View>
+                    <View style={styles.photoWrap}><Image style={styles.photo} source={require('../../assets/bg.jpg')}/></View>   
 
             </View>
         </ScrollView>

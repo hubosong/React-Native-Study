@@ -1,18 +1,33 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { View, Text, TouchableHighlight } from 'react-native'
 import styles from './styles'
 
-export default function Screen1({ navigation }) {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <TouchableHighlight
-                style={styles.btn}
-                underlayColor='#555'
-                onPress={() => { navigation.navigate('Screen2') }}>
+export default class Screen1 extends Component {
 
-                <Text style={styles.btnText}>Screen 2</Text>
-                
-            </TouchableHighlight>
-        </View>
-    )
+    /*
+    state = {
+        animatePress: new Animated.Value(1)
+    }
+
+    animate() {
+        Animated.timing(this.state.animatePress, {
+            toValue: 0.8,
+            duration: 500,
+            useNativeDriver: true,
+        }).start()
+    }
+    */
+
+    render() {
+        return (
+            <View style={[styles.mainContainer, { backgroundColor: '#0af' }]}>
+                <TouchableHighlight
+                    style={styles.btn}
+                    onPress={() => { this.props.navigation.navigate('Screen2') }}>
+                    <Text style={styles.btnText}>Acessar SCREEN1</Text>
+                </TouchableHighlight>
+            </View>
+        )
+    }
+
 }

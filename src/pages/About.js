@@ -3,7 +3,7 @@ import { View, Button, StyleSheet, ImageBackground } from 'react-native'
 
 export default function About({ navigation }) {
     return (
-        <ImageBackground source={require('../bg.jpg')} style={styles.imgBG}>
+        <ImageBackground source={require('../assets/bg.jpg')} style={styles.imgBG}>
             <View style={styles.inner}>
                 <Button
                     title="<< Voltar HOME SCREEN"

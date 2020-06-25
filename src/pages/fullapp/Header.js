@@ -3,11 +3,11 @@ import {View, Text, StyleSheet, Image, ImageBackground} from 'react-native'
 
 export default function Header() {
     return(
-        <ImageBackground style={styles.headerBG} source={require('../../bg1.jpg')}>
+        <ImageBackground style={styles.headerBG} source={require('../../assets/bg1.jpg')}>
             <View style={styles.header}>
 
                 <View style={styles.profilePicWrap}>
-                    <Image style={styles.profilePic} source={require('../../react.png')}/>
+                    <Image style={styles.profilePic} source={require('../../assets/react.png')}/>
                 </View>
 
                 <Text style={styles.name}>Robson Machczew</Text>

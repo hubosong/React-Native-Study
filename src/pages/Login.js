@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import { View, Text, TextInput, ImageBackground, StyleSheet, Image, Dimensions, TouchableOpacity, ToastAndroid } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
-import bgImage from '../bg.jpg'
-import logo from '../react.png'
+import bgImage from '../assets/bg.jpg'
+import logo from '../assets/react.png'
 
 const { width: WIDTH } = Dimensions.get('window')
 
