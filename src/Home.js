@@ -16,6 +16,10 @@ export default function Home({ navigation }) {
 
                 <Text style={{ fontSize: 30, margin: 20 }}>React Native Studies</Text>
 
+                <TouchableHighlight onPress={() => navigation.navigate('MainScreen')} style={{ ...styles.btn }} underlayColor='#555'>
+                    <Text style={{ ...styles.btnText }}>MainScreen</Text>
+                </TouchableHighlight>
+
                 <TouchableHighlight onPress={() => navigation.navigate('Animations')} style={{ ...styles.btn }} underlayColor='#555'>
                     <Text style={{ ...styles.btnText }}>Animations</Text>
                 </TouchableHighlight>

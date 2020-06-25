@@ -17,6 +17,8 @@ import Login from './pages/Login'
 import PropsStates from './pages/PropsStates'
 import FullAPP from './pages/FullAPP'
 import Animations from './pages/Animations'
+import MainScreen from './pages/screensstacknav/MainScreen'
+
 
 //navegador das telas Stack
 const Stack = createStackNavigator()
@@ -29,7 +31,9 @@ export default function Routes() {
                 //headerMode="none"
                 screenOptions={{
                     headerStyle: { backgroundColor: '#555' },
-                    headerTintColor: '#fff'
+                    headerTintColor: '#fff',
+                    gestureEnabled: true,
+                    gestureDirection: 'horizontal',
                 }}>
 
                 {/** colocar todas as telas */}
@@ -44,6 +48,7 @@ export default function Routes() {
                 <Stack.Screen name='PropsStates' component={PropsStates} />
                 <Stack.Screen name='FullAPP' component={FullAPP} />
                 <Stack.Screen name='Animations' component={Animations} />
+                <Stack.Screen name='MainScreen' component={MainScreen} />
 
             </Stack.Navigator>
 
