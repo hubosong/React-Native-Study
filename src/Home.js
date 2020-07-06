@@ -11,79 +11,106 @@ export default function Home({ navigation }) {
 
     return (
 
-        <ScrollView style={{ backgroundColor: '#ddd' }}>
-            <View style={{ flex: 1, alignItems: 'center' }}>
+        <ScrollView style={{ flex: 1 }}>
+            <View style={styles.container}>
 
                 <Text style={{ fontSize: 30, margin: 20 }}>React Native Studies</Text>
 
-                <TouchableHighlight onPress={() => navigation.navigate('Netflix')} style={{ ...styles.btn }} underlayColor='#555'>
-                    <Text style={{ ...styles.btnText }}>Netflix</Text>
+                <TouchableHighlight onPress={() => navigation.navigate('Cam')} style={{ ...styles.btn, backgroundColor: 'green' }} underlayColor='#555'>
+                    <Text style={styles.btnText}>Camera</Text>
                 </TouchableHighlight>
 
-                <TouchableHighlight onPress={() => navigation.navigate('MainScreen')} style={{ ...styles.btn }} underlayColor='#555'>
-                    <Text style={{ ...styles.btnText }}>MainScreen</Text>
+                <TouchableHighlight onPress={() => navigation.navigate('Json')} style={styles.btn} underlayColor='#555'>
+                    <Text style={styles.btnText}>Json</Text>
                 </TouchableHighlight>
 
-                <TouchableHighlight onPress={() => navigation.navigate('Animations')} style={{ ...styles.btn }} underlayColor='#555'>
-                    <Text style={{ ...styles.btnText }}>Animations</Text>
+                <TouchableHighlight onPress={() => navigation.navigate('Another')} style={styles.btn} underlayColor='#555'>
+                    <Text style={styles.btnText}>Another</Text>
                 </TouchableHighlight>
 
-                <TouchableHighlight onPress={() => navigation.navigate('FullAPP')} style={{ ...styles.btn }} underlayColor='#555'>
-                    <Text style={{ ...styles.btnText }}>FullAPP</Text>
+                <TouchableHighlight onPress={() => navigation.navigate('KeyboardAvoidingView')} style={styles.btn} underlayColor='#555'>
+                    <Text style={styles.btnText}>KeyboardAvoidingView</Text>
                 </TouchableHighlight>
 
-                <TouchableHighlight onPress={() => navigation.navigate('PropsStates')} style={{ ...styles.btn }} underlayColor='#555'>
-                    <Text style={{ ...styles.btnText }}>PropsStates</Text>
+                <TouchableHighlight onPress={() => navigation.navigate('Gradient')} style={styles.btn} underlayColor='#555'>
+                    <Text style={styles.btnText}>Gradient</Text>
                 </TouchableHighlight>
 
-
-
-                <Text style={{ marginBottom: 10 }}>------------------</Text>
-
-
-
-                <TouchableHighlight onPress={() => navigation.navigate('Views')} style={{ ...styles.btn }} underlayColor='#555'>
-                    <Text style={{ ...styles.btnText }}>VIEWS</Text>
+                <TouchableHighlight onPress={() => navigation.navigate('LoginAirBnB')} style={styles.btn} underlayColor='#555'>
+                    <Text style={styles.btnText}>LoginAirBnB</Text>
                 </TouchableHighlight>
 
-                <TouchableHighlight onPress={() => navigation.navigate('IMC')} style={{ ...styles.btn }} underlayColor='#555'>
-                    <Text style={{ ...styles.btnText }}>IMC</Text>
+                <TouchableHighlight onPress={() => navigation.navigate('RippleEffect')} style={styles.btn} underlayColor='#555'>
+                    <Text style={styles.btnText}>RippleEffect</Text>
                 </TouchableHighlight>
 
-                <TouchableHighlight onPress={() => navigation.navigate('Tabs')} style={{ ...styles.btn }} underlayColor='#555'>
-                    <Text style={{ ...styles.btnText }}>TABS</Text>
+                <TouchableHighlight onPress={() => navigation.navigate('Netflix')} style={styles.btn} underlayColor='#555'>
+                    <Text style={styles.btnText}>Netflix</Text>
                 </TouchableHighlight>
 
-                <TouchableHighlight onPress={() => navigation.navigate('About')} style={{ ...styles.btn }} underlayColor='#555'>
-                    <Text style={{ ...styles.btnText }}>ABOUT</Text>
+                <TouchableHighlight onPress={() => navigation.navigate('MainScreen')} style={styles.btn} underlayColor='#555'>
+                    <Text style={styles.btnText}>MainScreen</Text>
                 </TouchableHighlight>
 
-                <TouchableOpacity onPress={() => navigation.navigate('Grid')} style={{ ...styles.btn, marginTop: 10 }}>
-                    <Text style={{ ...styles.btnText }}>GRID</Text>
+                <TouchableHighlight onPress={() => navigation.navigate('Animations')} style={{ ...styles.btn, backgroundColor: 'green' }} underlayColor='#555'>
+                    <Text style={styles.btnText}>Animations</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={() => navigation.navigate('FullAPP')} style={styles.btn} underlayColor='#555'>
+                    <Text style={styles.btnText}>FullAPP</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={() => navigation.navigate('PropsStates')} style={styles.btn} underlayColor='#555'>
+                    <Text style={styles.btnText}>PropsStates</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={() => navigation.navigate('Views')} style={styles.btn} underlayColor='#555'>
+                    <Text style={styles.btnText}>VIEWS</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={() => navigation.navigate('IMC')} style={styles.btn} underlayColor='#555'>
+                    <Text style={styles.btnText}>IMC</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={() => navigation.navigate('Tabs')} style={styles.btn} underlayColor='#555'>
+                    <Text style={styles.btnText}>TABS</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={() => navigation.navigate('About')} style={styles.btn} underlayColor='#555'>
+                    <Text style={styles.btnText}>ABOUT</Text>
+                </TouchableHighlight>
+
+                <TouchableOpacity onPress={() => navigation.navigate('Grid')} style={{ ...styles.btn, backgroundColor: 'green' }}>
+                    <Text style={styles.btnText}>GRID</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate('ElementsComponents')} style={{ ...styles.btn, marginTop: 10 }}>
-                    <Text style={{ ...styles.btnText }}>ElementsComponents</Text>
+                <TouchableOpacity onPress={() => navigation.navigate('ElementsComponents')} style={styles.btn}>
+                    <Text style={styles.btnText}>ElementsComponents</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={() => navigation.navigate('Login')} style={{ ...styles.btn, marginTop: 10 }}>
-                    <Text style={{ ...styles.btnText }}>Login</Text>
+                <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.btn}>
+                    <Text style={styles.btnText}>Login</Text>
                 </TouchableOpacity>
 
             </View>
         </ScrollView>
 
-
     )
 }
 
 const styles = StyleSheet.create({
+    container: {
+        flexDirection: 'row', 
+        flexWrap: 'wrap', 
+        justifyContent: 'center', 
+        alignItems: 'center'
+    },
     btn: {
         backgroundColor: "#a0f",
         paddingVertical: 12,
         paddingHorizontal: 25,
         borderRadius: 25,
-        marginBottom: 10,
+        margin: 5,
     },
     btnActive: {
         backgroundColor: '#555'

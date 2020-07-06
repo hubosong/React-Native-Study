@@ -3,12 +3,13 @@ import { View, StyleSheet, Animated, Dimensions, TouchableOpacity, Text } from '
 
 import { PanGestureHandler, State } from 'react-native-gesture-handler'
 
-export default class Animations extends React.Component {
+export default class Animations extends React.PureComponent {
 
     // fadein fadeout
     state = {
         fadeValue: new Animated.Value(0)
     }
+
     fadein = () => {
         Animated.timing(this.state.fadeValue, {
             toValue: 1,
@@ -34,6 +35,8 @@ export default class Animations extends React.Component {
                 nativeEvent: { translationX: this.translateX, translationY: this.translateY }
             }
         ], { useNativeDriver: true })
+
+        this.animatedValue = new Animated.Value(0)
     }
 
     //faz animacao voltar ao estado inicial
@@ -55,6 +58,17 @@ export default class Animations extends React.Component {
         }
     }
 
+
+    //zoom
+    zoom = () => {
+        Animated.timing(this.animatedValue, {
+            toValue: 1,
+            duration: 1000,
+            useNativeDriver: true
+        }).start()
+    }
+
+
     render() {
         return (
             <View style={styles.container}>
@@ -69,6 +83,7 @@ export default class Animations extends React.Component {
                                 styles.box,
                                 {
                                     transform: [{ translateX: this.translateX, translateY: this.translateY }]
+
                                 }
                             ]}
                         />
@@ -77,16 +92,87 @@ export default class Animations extends React.Component {
 
 
                 <View style={styles.layout2}>
-                    <View style={{flexDirection: 'row'}}>
-                    <TouchableOpacity style={styles.btn} onPress={() => this.fadein()}>
-                        <Text style={styles.textBtn}>FadeIN</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.btn} onPress={() => this.fadeout()}>
-                        <Text style={styles.textBtn}>FadeOUT</Text>
-                    </TouchableOpacity>
+                    <View style={{ flexDirection: 'row' }}>
+                        <TouchableOpacity style={styles.btn} onPress={() => this.fadein()}>
+                            <Text style={styles.textBtn}>FadeIN</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.btn} onPress={() => this.fadeout()}>
+                            <Text style={styles.textBtn}>FadeOUT</Text>
+                        </TouchableOpacity>
                     </View>
-                    
-                    <Animated.View style={{ opacity: this.state.fadeValue, height: 30, width: 200, backgroundColor: "#ff0", justifyContent: "center"}} />
+
+                    <Animated.View style={{ opacity: this.state.fadeValue, height: 30, width: 200, backgroundColor: "#ff0", justifyContent: "center" }} />
+                </View>
+
+                <View style={styles.layout3}>
+
+                    <TouchableOpacity style={styles.btn} onPress={() => this.zoom()}>
+                        <Text style={styles.textBtn}>ZoomIN</Text>
+                    </TouchableOpacity>
+
+                    <View style={{ flexDirection: 'row' }}>
+                        <Animated.View
+                            style={{
+                                width: 10,
+                                height: 10,
+                                backgroundColor: '#ff0',
+                                marginTop: 30,
+                                transform: [
+                                    {
+                                        scaleX: this.animatedValue.interpolate({
+                                            inputRange: [0, 1],
+                                            outputRange: [1, 20]
+                                        })
+                                    },
+                                    {
+                                        scaleY: this.animatedValue.interpolate({
+                                            inputRange: [0, 1],
+                                            outputRange: [1, 5]
+                                        })
+                                    }
+                                ]
+                            }} />
+
+                        <Animated.Image
+                            source={require('../assets/react.png')}
+                            resizeMode='cover'
+                            style={{
+                                //position: 'absolute',
+                                height: 10,
+                                width: 10,
+                                top: 30,
+                                left: 10,
+                                transform: [
+                                    {
+                                        translateX: this.animatedValue.interpolate({
+                                            inputRange: [0, 1],
+                                            outputRange: [0, 100]
+                                        })
+                                    },
+                                    {
+                                        translateY: this.animatedValue.interpolate({
+                                            inputRange: [0, 1],
+                                            outputRange: [0, -8]
+                                        })
+                                    },
+                                    {
+                                        scaleX: this.animatedValue.interpolate({
+                                            inputRange: [0, 1],
+                                            outputRange: [1, 15]
+                                        })
+                                    },
+                                    {
+                                        scaleY: this.animatedValue.interpolate({
+                                            inputRange: [0, 1],
+                                            outputRange: [1, 12.5]
+                                        })
+                                    }
+                                ]
+                            }}
+                        />
+
+                    </View>
+
                 </View>
 
             </View>
@@ -105,11 +191,12 @@ const styles = StyleSheet.create({
         backgroundColor: '#a0f',
         borderRadius: 30,
     },
+
     layout1: {
         flex: 2,
         height: Dimensions.get('window').height - 0,
         width: Dimensions.get('window').width - 0,
-        backgroundColor: '#333',
+        backgroundColor: '#ddd',
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -121,7 +208,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
-    
+    layout3: {
+        flex: 1,
+        height: Dimensions.get('window').height - 0,
+        width: Dimensions.get('window').width - 0,
+        backgroundColor: 'darkorange',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
     btn: {
         backgroundColor: "#a0f",
         width: 100,
@@ -131,11 +226,13 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         marginBottom: 10,
         marginLeft: 5,
-        marginRight: 5
+        marginRight: 5,
+        marginTop: -20
     },
     textBtn: {
         color: "#f4f4f4",
         fontWeight: "bold",
         textAlign: "center"
     }
+
 })

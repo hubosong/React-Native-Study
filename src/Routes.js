@@ -19,6 +19,13 @@ import FullAPP from './pages/FullAPP'
 import Animations from './pages/Animations'
 import MainScreen from './pages/screensstacknav/MainScreen'
 import Netflix from './pages/clonenetflix/Netflix'
+import RippleEffect from './pages/RippleEffect'
+import LoginAirBnB from './pages/LoginAirBnB'
+import Gradient from './pages/Gradient'
+import KeyboardAvoidingView from './pages/KeyboardAvoidingView'
+import Another from './pages/Another'
+import Json from './pages/Json'
+import Cam from './pages/Cam'
 
 
 //navegador das telas Stack
@@ -51,6 +58,13 @@ export default function Routes() {
                 <Stack.Screen name='Animations' component={Animations} />
                 <Stack.Screen name='MainScreen' component={MainScreen} />
                 <Stack.Screen name='Netflix' component={Netflix} />
+                <Stack.Screen name='RippleEffect' component={RippleEffect} />
+                <Stack.Screen name='LoginAirBnB' component={LoginAirBnB} />
+                <Stack.Screen name='Gradient' component={Gradient} />
+                <Stack.Screen name='KeyboardAvoidingView' component={KeyboardAvoidingView} />
+                <Stack.Screen name='Another' component={Another} />
+                <Stack.Screen name='Json' component={Json} />
+                <Stack.Screen name='Cam' component={Cam} />
 
             </Stack.Navigator>
 
