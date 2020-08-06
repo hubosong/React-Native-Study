@@ -4,7 +4,6 @@ import { View, Text, StyleSheet, FlatList } from 'react-native'
 export default class Json extends React.PureComponent {
 
     state = {
-        data: [],
         data1: [
             {
                 name: 'Caroline',
@@ -14,7 +13,8 @@ export default class Json extends React.PureComponent {
                 name: 'Robson',
                 contact: '888',
             },
-        ]
+        ],
+        data: [],
     }
 
     componentDidMount(){
@@ -33,6 +33,7 @@ export default class Json extends React.PureComponent {
             <View>
                 <Text style={{marginTop: 15, fontWeight: 'bold', alignSelf: 'center'}}>Display JSON Data</Text>
 
+                {/** json interno */}
                 <FlatList
                     style={{margin:15, alignSelf: 'center'}}
                     data={this.state.data1}
@@ -44,6 +45,7 @@ export default class Json extends React.PureComponent {
                     }
                 />
     
+                {/** json externo */}
                 <FlatList
                     data={this.state.data}
                     keyExtractor={(x, i) => i}

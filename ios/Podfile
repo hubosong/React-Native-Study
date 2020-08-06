@@ -83,6 +83,10 @@ target 'sreactnative' do
 
   pod 'react-native-camera', :path => '../node_modules/react-native-camera'
 
+  pod 'react-native-draw-view', :path => '../node_modules/react-native-draw-view'
+
+  pod 'react-native-webview', :path => '../node_modules/react-native-webview'
+
   target 'sreactnativeTests' do
     inherit! :complete
     # Pods for testing

@@ -1,4 +1,4 @@
-#Mon Jul 06 10:55:26 BRT 2020
+#Tue Jul 14 11:15:42 BRT 2020
 base.0=D\:\\REACT\\reactnative\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

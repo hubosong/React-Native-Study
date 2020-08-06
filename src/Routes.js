@@ -25,7 +25,15 @@ import Gradient from './pages/Gradient'
 import KeyboardAvoidingView from './pages/KeyboardAvoidingView'
 import Another from './pages/Another'
 import Json from './pages/Json'
+import Json0 from './pages/Json0'
 import Cam from './pages/Cam'
+import Register from './pages/Register'
+import AnimScale from './pages/AnimScale'
+import DragDrop from './pages/DragDrop'
+import DrawOnScreen from './pages/DrawOnScreen'
+import Webview from './pages/Webview'
+
+
 
 
 //navegador das telas Stack
@@ -64,7 +72,14 @@ export default function Routes() {
                 <Stack.Screen name='KeyboardAvoidingView' component={KeyboardAvoidingView} />
                 <Stack.Screen name='Another' component={Another} />
                 <Stack.Screen name='Json' component={Json} />
+                <Stack.Screen name='Json0' component={Json0} />
                 <Stack.Screen name='Cam' component={Cam} />
+                <Stack.Screen name='Register' component={Register} />
+                <Stack.Screen name='AnimScale' component={AnimScale} />
+                <Stack.Screen name='DragDrop' component={DragDrop} />
+                <Stack.Screen name='DrawOnScreen' component={DrawOnScreen} />
+                <Stack.Screen name='Webview' component={Webview} />
+                
 
             </Stack.Navigator>
 

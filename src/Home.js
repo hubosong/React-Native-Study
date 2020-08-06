@@ -16,8 +16,32 @@ export default function Home({ navigation }) {
 
                 <Text style={{ fontSize: 30, margin: 20 }}>React Native Studies</Text>
 
+                <TouchableHighlight onPress={() => navigation.navigate('Webview')} style={{ ...styles.btn }} underlayColor='#555'>
+                    <Text style={styles.btnText}>Webview</Text>
+                </TouchableHighlight>
+                
+                <TouchableHighlight onPress={() => navigation.navigate('DrawOnScreen')} style={{ ...styles.btn }} underlayColor='#555'>
+                    <Text style={styles.btnText}>DrawOnScreen</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={() => navigation.navigate('DragDrop')} style={{ ...styles.btn }} underlayColor='#555'>
+                    <Text style={styles.btnText}>DragDrop</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={() => navigation.navigate('AnimScale')} style={{ ...styles.btn }} underlayColor='#555'>
+                    <Text style={styles.btnText}>AnimScale</Text>
+                </TouchableHighlight>
+                
+                <TouchableHighlight onPress={() => navigation.navigate('Register')} style={{ ...styles.btn }} underlayColor='#555'>
+                    <Text style={styles.btnText}>Register</Text>
+                </TouchableHighlight>
+
                 <TouchableHighlight onPress={() => navigation.navigate('Cam')} style={{ ...styles.btn, backgroundColor: 'green' }} underlayColor='#555'>
                     <Text style={styles.btnText}>Camera</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={() => navigation.navigate('Json0')} style={styles.btn} underlayColor='#555'>
+                    <Text style={styles.btnText}>Json0</Text>
                 </TouchableHighlight>
 
                 <TouchableHighlight onPress={() => navigation.navigate('Json')} style={styles.btn} underlayColor='#555'>

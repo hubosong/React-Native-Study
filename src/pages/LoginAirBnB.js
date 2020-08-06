@@ -35,6 +35,7 @@ export default class LoginAirBnB extends React.Component {
         } else {
             try {
                 alert('OK')
+                
                 /*
                 const response = await api.post('/sessions', {
                     email: this.state.email,
